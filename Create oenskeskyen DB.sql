@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS oenskeskyen;
-CREATE DATABASE oenskeskyen;
-USE oenskeskyen;
+DROP DATABASE IF EXISTS wishingworld;
+CREATE DATABASE wishingworld;
+USE wishingworld;
 
 CREATE TABLE users
 (
