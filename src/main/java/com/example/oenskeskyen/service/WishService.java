@@ -23,7 +23,7 @@ public class WishService {
         return wishRepo.userExist(username, password);
     }
 
-    public User getUser(String username, String password){
-        return wishRepo.getUser(username, password);
+    public User getUser(String username){
+        return wishRepo.getUser(username);
     }
 }

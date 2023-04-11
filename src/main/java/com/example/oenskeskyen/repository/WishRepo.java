@@ -33,9 +33,9 @@ public class WishRepo {
         return template.queryForObject(sql, Integer.class,username, password) > 0;
     }
 
-    public User getUser(String username, String password){
-        String sql = "SELECT * FROM users WHERE username = ? AND passcode = ?";
+    public User getUser(String username){
+        String sql = "SELECT * FROM users WHERE username = ?";
         RowMapper<User> rowMapper = new BeanPropertyRowMapper<>(User.class);
-        return template.queryForObject(sql, rowMapper, username, password);
+        return template.queryForObject(sql, rowMapper, username);
     }
 }

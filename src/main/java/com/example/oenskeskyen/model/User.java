@@ -5,19 +5,17 @@ public class User {
     private String first_name;
     private String last_name;
     private String email;
-    private String phone_number;
     private String username;
     private String passcode;
     //todo use hashing to store passwords
     //todo advanced to use random salts
 
 
-    public User(int user_id, String first_name, String last_name, String email, String phone_number, String username, String passcode) {
+    public User(int user_id, String first_name, String last_name, String email, String username, String passcode) {
         this.user_id = user_id;
         this.first_name = first_name;
         this.last_name = last_name;
         this.email = email;
-        this.phone_number = phone_number;
         this.username = username;
         this.passcode = passcode;
     }
@@ -55,14 +53,6 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getPhone_number() {
-        return phone_number;
-    }
-
-    public void setPhone_number(String phone_number) {
-        this.phone_number = phone_number;
     }
 
     public String getUsername() {

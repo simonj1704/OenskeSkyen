@@ -9,14 +9,19 @@
 </head>
 <body>
 <header>
-    <h1>User Page</h1>
+    <h1>Wishing World</h1>
+    <nav>
+        <ul class="menu">
+            <li><a th:href="@{index}">Forside</a></li>
+            <li><a th:href="@{login}">Login</a></li>
+            <li><a th:href="@{userpage}">User Page</a></li>
+        </ul>
+    </nav>
+    <div class="profile">
+    <p>Welcome <span th:text="${user.username}"></span></p>
+        <img src="styles/images/Profile.jpg" alt="Profile" style="height: 50px">
+    </div>
 </header>
-<nav>
-    <ul class="menu">
-        <li><a th:href="@{index}">Forside</a></li>
-        <li><a th:href="@{login}">Login</a></li>
-    </ul>
-</nav>
 <main>
     <p>User Name: <span th:text="${user.username}"></span></p>
     <p>Password: <span th:text="${user.passcode}"></span></p>
@@ -24,7 +29,6 @@
     <p>First name: <span th:text="${user.first_name}"></span></p>
     <p>Last name: <span th:text="${user.last_name}"></span></p>
     <p>Email: <span th:text="${user.email}"></span></p>
-    <p>Phone Number: <span th:text="${user.phone_number}"></span></p>
 </main>
 <footer></footer>
 </body>
