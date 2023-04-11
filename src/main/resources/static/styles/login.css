@@ -1,0 +1,23 @@
+body {
+    background: skyblue;
+}
+
+h1 {
+    text-align: center;
+}
+
+main{
+    text-align: center;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 2px);
+    grid-template-rows: repeat(3, 2px);
+}
+
+.menu{
+    display:flex;
+    list-style: none;
+    gap: 10px;
+}

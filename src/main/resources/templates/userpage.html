@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Page</title>
+    <link rel="stylesheet" type="text/css" href="/styles/userpage.css">
+    <link rel="stylesheet" type="text/css" href="../static/styles/userpage.css">
+
+</head>
+<body>
+<header>
+    <h1>User Page</h1>
+</header>
+<nav>
+    <ul class="menu">
+        <li><a th:href="@{index}">Forside</a></li>
+        <li><a th:href="@{login}">Login</a></li>
+    </ul>
+</nav>
+<main>
+    <p>User Name: <span th:text="${user.username}"></span></p>
+    <p>Password: <span th:text="${user.passcode}"></span></p>
+    <p>User ID: <span th:text ="${user.user_id}"></span></p>
+    <p>First name: <span th:text="${user.first_name}"></span></p>
+    <p>Last name: <span th:text="${user.last_name}"></span></p>
+    <p>Email: <span th:text="${user.email}"></span></p>
+    <p>Phone Number: <span th:text="${user.phone_number}"></span></p>
+</main>
+<footer></footer>
+</body>
+</html>
