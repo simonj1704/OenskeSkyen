@@ -12,6 +12,7 @@ h1 {
     font-size: 28px;
     font-family: Arial;
     color: ghostwhite;
+    padding: 10px;
 }
 
 main{
@@ -38,7 +39,6 @@ main{
 
 .top-bar{
     background-color: #fff;
-    border: none;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
     box-sizing: border-box;
@@ -61,6 +61,24 @@ main{
     line-height: 16px;
     padding: 0 8px;
     vertical-align: middle;
+}
+
+.front_link{
+    color: white;
+    text-decoration: none;
+}
+.login_link{
+    color: white;
+    text-decoration: none;
+}
+
+.front_link:hover{
+    color: lightgrey;
+    cursor: pointer;
+}
+.login_link:hover{
+    color: lightgrey;
+    cursor: pointer;
 }
 
 .login_button{
@@ -91,11 +109,11 @@ main{
     border-radius: 6px;
     margin-bottom: 10px;
     font-family: Arial;
-    font-size: 35px;
+    font-size: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 85px;
+    padding-right: 85px;
     border-width: 1px;
     border-color: grey;
     text-align: left;
@@ -105,11 +123,11 @@ main{
     border-radius: 6px;
     margin-bottom: 10px;
     font-family: Arial;
-    font-size: 35px;
+    font-size: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 85px;
+    padding-right: 85px;
     border-width: 1px;
     border-color: grey;
     text-align: left;
