@@ -26,4 +26,7 @@ public class WishService {
     public User getUser(String username, String password){
         return wishRepo.getUser(username, password);
     }
+    public void addUser(User user){
+        wishRepo.addUser(user);
+    }
 }

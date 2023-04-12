@@ -37,4 +37,9 @@ public class HomeController {
             return "login";
         }
     }
+    @PostMapping("createUser")
+    public String createUser(@ModelAttribute User user){
+        wishService.addUser(user);
+        return "redirect:/";
+    }
 }
