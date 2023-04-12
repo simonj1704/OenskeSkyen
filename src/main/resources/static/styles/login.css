@@ -132,3 +132,7 @@ main{
     border-color: grey;
     text-align: left;
 }
+
+.wrong_userInput{
+    font-family: Arial;
+}
