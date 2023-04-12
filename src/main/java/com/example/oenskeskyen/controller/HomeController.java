@@ -22,12 +22,7 @@ public class HomeController {
         return "index";
     }
 
-    @GetMapping("/login")
-    public String login(){
-        return "login";
-    }
-
-    @PostMapping("/login")
+    @PostMapping("/index")
     public String userPage(@RequestParam("username") String username,
                            @RequestParam("password") String password,
                            Model model, HttpSession session){
@@ -37,8 +32,8 @@ public class HomeController {
             session.setAttribute("isLoggedIn", true);
             return "/userpage";
         } else {
-            model.addAttribute("error", "Invalid Username or Password");
-            return "login";
+            model.addAttribute("error", "Forkert Brugernavn eller Adgangskode   ");
+            return "index";
         }
     }
 
