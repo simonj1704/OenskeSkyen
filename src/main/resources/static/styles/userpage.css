@@ -1,4 +1,4 @@
-header{
+header {
     background: skyblue;
     margin: 0;
     display: flex;
@@ -6,26 +6,45 @@ header{
     padding: 10px;
     align-items: center;
 }
-header div{
+
+header div {
     display: flex;
 }
-header img{
+
+header img {
     padding: 0px 0px 0px 10px;
 }
-ul{
+
+ul {
     display: flex;
     flex-direction: row;
     list-style: none;
     gap: 10px;
     padding: 0px 200px 0px 0px;
 }
-body{
-    margin: 0;
-}
-header h1{
+
+body {
     margin: 0;
 }
 
-main h1{
+header h1 {
+    margin: 0;
+}
+
+main h1 {
     font-size: 30px;
+}
+
+.card {
+    width: 200px;
+    height: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card_container{
+    padding: 2px 16px;
+    border-top: 1px solid black;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
