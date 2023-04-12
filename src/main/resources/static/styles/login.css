@@ -85,6 +85,7 @@ main{
     font-family: Arial;
     color: white;
 }
+
 .login_button:hover{
     cursor: pointer;
     background-color: #6d5ab3;
