@@ -35,7 +35,7 @@ public class HomeController {
             model.addAttribute("user", wishService.getUser(username));
             session.setAttribute("username", username);
             session.setAttribute("isLoggedIn", true);
-            return "userpage";
+            return "/userpage";
         } else {
             model.addAttribute("error", "Invalid Username or Password");
             return "login";
@@ -49,6 +49,7 @@ public class HomeController {
         if (isLoggedIn == null || !isLoggedIn) {
             return "redirect:/login";
         } else {
+
             model.addAttribute("user",
                     wishService.getUser((String) session.getAttribute("username")));
             return "userpage";

@@ -2,6 +2,7 @@ package com.example.oenskeskyen.service;
 
 import com.example.oenskeskyen.model.User;
 import com.example.oenskeskyen.model.Wish;
+import com.example.oenskeskyen.model.Wishlist;
 import com.example.oenskeskyen.repository.WishRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,5 +26,9 @@ public class WishService {
 
     public User getUser(String username){
         return wishRepo.getUser(username);
+    }
+
+    public List<Wishlist> fetchWishList(String username){
+        return null;
     }
 }
