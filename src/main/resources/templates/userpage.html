@@ -18,22 +18,33 @@
         </ul>
     </nav>
     <div class="profile">
-    <p>Welcome <span th:text="${user.username}"></span></p>
+        <p>Welcome <span th:text="${user.username}"></span></p>
         <img src="styles/images/Profile.jpg" alt="Profile" style="height: 50px">
     </div>
 </header>
 <main>
     <h1>WishLists</h1>
-    <div class="card">
-        <img src="styles/images/wish.jpg" alt="Card Picture" style="width: 100%">
-        <div class="card_container">
-            <h4><b>Wishing list name</b></h4>
-            <p>Something about the wishing list</p>
+    <div class="wish_lists">
+        <div th:each="list: ${wishlist}">
+            <a th:href="@{'/viewWishList/' + ${list.wishlist_id}}">
+                <div class="card">
+                    <img src="styles/images/wish.jpg" alt="Card Picture" style="width: 100%">
+                    <div class="card_container">
+                        <span th:text="${list.wishlist_name}"></span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="new_card">
+            <img src="styles/images/plus_icon.jpg" alt="New Wishlist" style="width: 100%">
+            <div class="card_container">
+                <h4><b>New WishList</b></h4>
+            </div>
         </div>
     </div>
     <p>User Name: <span th:text="${user.username}"></span></p>
     <p>Password: <span th:text="${user.passcode}"></span></p>
-    <p>User ID: <span th:text ="${user.user_id}"></span></p>
+    <p>User ID: <span th:text="${user.user_id}"></span></p>
     <p>First name: <span th:text="${user.first_name}"></span></p>
     <p>Last name: <span th:text="${user.last_name}"></span></p>
     <p>Email: <span th:text="${user.email}"></span></p>

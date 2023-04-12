@@ -29,6 +29,10 @@ public class WishService {
     }
 
     public List<Wishlist> fetchWishList(String username){
-        return null;
+        List<Wishlist> list = wishRepo.fetchAllWishlist(username);
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
+        }
+        return wishRepo.fetchAllWishlist(username);
     }
 }

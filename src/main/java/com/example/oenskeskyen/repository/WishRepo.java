@@ -2,6 +2,7 @@ package com.example.oenskeskyen.repository;
 
 import com.example.oenskeskyen.model.User;
 import com.example.oenskeskyen.model.Wish;
+import com.example.oenskeskyen.model.Wishlist;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -37,5 +38,11 @@ public class WishRepo {
         String sql = "SELECT * FROM users WHERE username = ?";
         RowMapper<User> rowMapper = new BeanPropertyRowMapper<>(User.class);
         return template.queryForObject(sql, rowMapper, username);
+    }
+
+    public List<Wishlist> fetchAllWishlist(String username){
+        String sql = "SELECT * FROM wishlist WHERE user_id =(SELECT user_id FROM users WHERE username = ?)";
+        RowMapper<Wishlist> rowMapper = new BeanPropertyRowMapper<>(Wishlist.class);
+        return template.query(sql, rowMapper, username);
     }
 }
