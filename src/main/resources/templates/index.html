@@ -5,6 +5,7 @@
     <title>Wishing World</title>
     <link rel="stylesheet" type="text/css" href="/styles/login.css">
     <link rel="stylesheet" type="text/css" href="../static/styles/login.css">
+    <link rel="stylesheet" type="text/css" href="/styles/popupBox.css">
 </head>
 <body>
 <header>
@@ -16,7 +17,6 @@
         <li><a th:href="@{userpage}" class="UP_link">User Page</a></li>
     </ul>
 </nav>
-
 <main>
     <div class="top-bar">
         <form action="/index" method="post">
@@ -27,8 +27,25 @@
                        placeholder="Adgangskode"><br>
             </div>
             <input type="submit" value="login" class="login_button">
+            <a class="login_button" href="#popup1">Opret</a>
         </form>
         <span th:text="${error}" class="wrong_userInput"></span>
+    </div>
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>Indtast oplysninger</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="input_box">
+                <form action="createUser" method="post">
+                    <input type="text" name="first_name" placeholder="Fornavn">
+                    <input type="text" name="last_name" placeholder="Efternavn">
+                    <input type="text" name="email" placeholder="E-mailadresse">
+                    <input type="text" name="username" placeholder="Brugernavn">
+                    <input type="text" name="passcode" placeholder="Adgangskode">
+                    <input type="submit" value="Opret" class="login_button">
+                </form>
+            </div>
+        </div>
     </div>
 </main>
 <footer>
