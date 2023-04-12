@@ -1,9 +1,18 @@
 body {
-    background: skyblue;
+    margin: 0px;
+    background-image: url("https://images.pexels.com/photos/220118/pexels-photo-220118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+
 }
 
 h1 {
     text-align: center;
+    margin: 0px;
+    border-color: #506685;
+    background-color: #6452a3;
+    font-size: 28px;
+    font-family: Arial;
+    color: ghostwhite;
+    padding: 10px;
 }
 
 main{
@@ -19,5 +28,107 @@ main{
 .menu{
     display:flex;
     list-style: none;
-    gap: 10px;
+    gap: 40px;
+    background-color: #6452A3;
+    font-size: 28px;
+    font-family: Arial;
+    color: ghostwhite;
+    margin: 0px;
+    padding-bottom: 10px;
+}
+
+.top-bar{
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    margin: 40px 0 0;
+    padding: 0px 0 28px;
+    width: 596px;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    alignment: center;
+}
+
+.login_credentials{
+    background: #FFFFFF;
+    border: 1px solid #dddfe2;
+    color: #1d2129;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    height: 22px;
+    line-height: 16px;
+    padding: 0 8px;
+    vertical-align: middle;
+}
+
+.front_link{
+    color: white;
+    text-decoration: none;
+}
+.login_link{
+    color: white;
+    text-decoration: none;
+}
+
+.front_link:hover{
+    color: lightgrey;
+    cursor: pointer;
+}
+.login_link:hover{
+    color: lightgrey;
+    cursor: pointer;
+}
+
+.login_button{
+    background-color: #5a4a94;
+    border: none;
+    border-radius: 14px;
+    font-size: 30px;
+    line-height: 48px;
+    padding: 0 26px;
+    width: 432px;
+    height: 50px;
+    font-family: Arial;
+    color: white;
+}
+.login_button:hover{
+    cursor: pointer;
+    background-color: #6d5ab3;
+}
+
+.input_box{
+    border-radius: 14px;
+    padding-top: 25px;
+    padding-bottom: 30px;
+    alignment: top;
+}
+
+.password_input{
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-family: Arial;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 85px;
+    padding-right: 85px;
+    border-width: 1px;
+    border-color: grey;
+    text-align: left;
+}
+
+.username_input{
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-family: Arial;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 85px;
+    padding-right: 85px;
+    border-width: 1px;
+    border-color: grey;
+    text-align: left;
 }

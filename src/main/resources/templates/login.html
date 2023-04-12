@@ -12,20 +12,21 @@
 </header>
 <nav>
   <ul class="menu">
-    <li><a th:href="@{index}">Forside</a></li>
-    <li><a th:href="@{login}">Login</a></li>
-    <li><a th:href="@{userpage}">User Page</a></li>
+    <li><a th:href="@{index}" class="front_link">Forside</a></li>
+    <li><a th:href="@{login}" class="login_link">Login</a></li>
   </ul>
 </nav>
 <main>
-  <form action="/login" method="post">
-  <label for="username">Username:</label><br>
-  <input type="text" name="username" id="username"><br>
-  <label for="password">Password:</label><br>
-  <input type="password" name="password" id="password"><br>
-  <input type="submit" value="login">
-</form>
-  <span th:text="${error}"></span>
+  <div class="top-bar">
+    <form action="/login" method="post">
+      <div class="input_box">
+        <input type="text" class="username_input" name="username" id="username" placeholder="E-mail eller brugernavn"><br>
+        <input type="password" class="password_input" name="password" id="password" placeholder="Adgangskode"><br>
+      </div>
+      <input type="submit" value="login" class="login_button">
+    </form>
+    <span th:text="${error}"></span>
+  </div>
 </main>
 <footer>
 
