@@ -40,6 +40,6 @@ public class HomeController {
     @PostMapping("createUser")
     public String createUser(@ModelAttribute User user){
         wishService.addUser(user);
-        return "redirect:/";
+        return "redirect: index";
     }
 }
