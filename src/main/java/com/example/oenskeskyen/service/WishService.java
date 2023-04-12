@@ -31,4 +31,7 @@ public class WishService {
     public List<Wishlist> fetchWishList(String username){
         return null;
     }
+    public void addUser(User user){
+        wishRepo.addUser(user);
+    }
 }

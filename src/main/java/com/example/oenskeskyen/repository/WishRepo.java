@@ -38,4 +38,9 @@ public class WishRepo {
         RowMapper<User> rowMapper = new BeanPropertyRowMapper<>(User.class);
         return template.queryForObject(sql, rowMapper, username);
     }
+    public void addUser(User user){
+        String sql = "INSERT INTO users (user_id, first_name, last_name, email, username, passcode) VALUES(?,?,?,?,?,?)";
+        template.update(sql, user.getUser_id(), user.getFirst_name(), user.getLast_name(), user.getEmail(),
+                user.getUsername(), user.getPasscode());
+    }
 }
