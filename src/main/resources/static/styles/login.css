@@ -67,16 +67,8 @@ main{
     color: white;
     text-decoration: none;
 }
-.login_link{
-    color: white;
-    text-decoration: none;
-}
 
 .front_link:hover{
-    color: lightgrey;
-    cursor: pointer;
-}
-.login_link:hover{
     color: lightgrey;
     cursor: pointer;
 }
@@ -119,6 +111,11 @@ main{
     text-align: left;
 }
 
+.UP_link{
+    color: white;
+    text-decoration: none;
+}
+
 .username_input{
     border-radius: 6px;
     margin-bottom: 10px;
@@ -135,4 +132,9 @@ main{
 
 .wrong_userInput{
     font-family: Arial;
+}
+
+.UP_link:hover{
+    color: lightgrey;
+    cursor: pointer;
 }
