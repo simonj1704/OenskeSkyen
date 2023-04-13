@@ -50,4 +50,9 @@ public class WishRepo {
         RowMapper<Wishlist> rowMapper = new BeanPropertyRowMapper<>(Wishlist.class);
         return template.query(sql, rowMapper, username);
     }
+    public void addWishToWishlist(Wish wish, int wishlist_id){
+        String sql = "INSERT INTO wish (wish_id, wish_name, wish_price, wishlist_id, reserved) VALUES(?,?,?,?,?)";
+        template.update(sql, wish.getId(), wish.getWish_name(), wish.getWish_price(), wishlist_id, false);
+        //TODO make it possible to choose reserved status. Add checkbox.
+    }
 }
