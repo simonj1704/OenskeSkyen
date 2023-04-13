@@ -50,4 +50,10 @@ public class WishRepo {
         RowMapper<Wishlist> rowMapper = new BeanPropertyRowMapper<>(Wishlist.class);
         return template.query(sql, rowMapper, username);
     }
+
+    public void addWishlist(Wishlist wishlist, String username){
+        String sql = "INSERT INTO wishlist (wishlist_name, user_id) VALUES (?, (SELECT user_id FROM users WHERE username = ?))";
+        template.update(sql, wishlist.getWishlist_name(), username);
+    }
+    //todo make add methods return boolean whether it worked or not
 }
