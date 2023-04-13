@@ -38,4 +38,7 @@ public class WishService {
     public void addUser(User user){
         wishRepo.addUser(user);
     }
+    public void addWishToWishlist(Wish wish,int wishlist_id){
+        wishRepo.addWishToWishlist(wish, wishlist_id);
+    }
 }

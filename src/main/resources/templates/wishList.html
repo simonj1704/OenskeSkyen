@@ -3,14 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Wishlist</title>
+    <link rel="stylesheet" type="text/css" href="/styles/login.css">
+    <link rel="stylesheet" type="text/css" href="../static/styles/login.css">
+    <link rel="stylesheet" type="text/css" href="/styles/popupBox.css">
+    <link rel="stylesheet" type="text/css" href="/styles/table.css">
 </head>
 <body>
 <h1>WishList</h1>
-<table>
+<table id>
     <thead>
         <tr>
             <th>Navn</th>
             <th>Pris</th>
+            <a class="login_button" href="#popup2">Tilføj ønske</a>
+            <div id="popup2" class="overlay">
+            <div class="popup">
+                <h2>Indtast oplysninger</h2>
+                <a class="close" href="#">&times;</a>
+                <div class="form_box" >
+                    <form th:action="@{'/addWish/' + ${wishlist}}">
+                        <input type="text" name="wish_name" placeholder="Navn">
+                        <input type="text" name="wish_price" placeholder="Pris">
+                        <input type="submit" value="Tilføj" class="login_button">
+                    </form>
+                </div>
+            </div>
+        </div>
         </tr>
     </thead>
     <tbody>

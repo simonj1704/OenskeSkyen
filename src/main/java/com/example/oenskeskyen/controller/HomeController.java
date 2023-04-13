@@ -68,7 +68,13 @@ public class HomeController {
     public String viewWishList(@PathVariable("wishlist_id") int wishlist_id, Model model){
         List<Wish> wishList = wishService.fetchAllWishes(wishlist_id);
         model.addAttribute("wishes", wishList);
+        model.addAttribute("wishlist", wishlist_id);
         return "wishList";
+    }
+    @GetMapping("/addWish/{wishlist_id}")
+    public String addWish(@ModelAttribute Wish wish, @PathVariable("wishlist_id") int wishlist_id){
+        wishService.addWishToWishlist(wish, wishlist_id);
+        return "redirect:/viewWishList/" + wishlist_id;
     }
 
 }
