@@ -56,6 +56,7 @@ public class HomeController {
     public String logout(HttpServletRequest request){
         HttpSession session = request.getSession();
         session.setAttribute("isLoggedIn", false);
+        session.invalidate();
         return "redirect:/index";
     }
 
