@@ -17,7 +17,14 @@
     </nav>
     <div class="profile">
     <p>Velkommen <span th:text="${user.first_name}"></span>!</p>
-        <img src="styles/images/Profile.jpg" alt="Profile" style="height: 50px">
+        <div class="dropdown">
+            <img src="styles/images/Profile.jpg" alt="Profile" style="height: 50px">
+            <div class="dropdown-content">
+                <a th:href="@{logout}" th:method="post">Log ud</a>
+            </div>
+        </div>
+
+
     </div>
 </header>
 <main>

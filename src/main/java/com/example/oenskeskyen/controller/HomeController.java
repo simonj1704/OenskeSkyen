@@ -47,6 +47,16 @@ public class HomeController {
             return "userpage";
         }
     }
+
+    @GetMapping("/logout")
+    public String logout(HttpServletRequest request){
+        HttpSession session = request.getSession(false);
+        if (session != null){
+            session.invalidate();
+        }
+        return "redirect:/index";
+    }
+
     @PostMapping("createUser")
     public String createUser(@ModelAttribute User user){
         wishService.addUser(user);
