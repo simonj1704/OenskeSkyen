@@ -29,10 +29,6 @@ public class WishService {
     }
 
     public List<Wishlist> fetchWishList(String username){
-        List<Wishlist> list = wishRepo.fetchAllWishlist(username);
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
-        }
         return wishRepo.fetchAllWishlist(username);
     }
     public void addUser(User user){
@@ -40,5 +36,8 @@ public class WishService {
     }
     public void addWishToWishlist(Wish wish,int wishlist_id){
         wishRepo.addWishToWishlist(wish, wishlist_id);
+    }
+    public void addWishlist(Wishlist wishlist, String username){
+        wishRepo.addWishlist(wishlist, username);
     }
 }

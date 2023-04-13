@@ -1,6 +1,7 @@
 package com.example.oenskeskyen.controller;
 
 import com.example.oenskeskyen.model.User;
+import com.example.oenskeskyen.model.Wishlist;
 import com.example.oenskeskyen.model.Wish;
 import com.example.oenskeskyen.service.WishService;
 import jakarta.servlet.http.HttpServletRequest;
@@ -55,6 +56,7 @@ public class HomeController {
     public String logout(HttpServletRequest request){
         HttpSession session = request.getSession();
         session.setAttribute("isLoggedIn", false);
+        session.invalidate();
         return "redirect:/index";
     }
 
@@ -62,6 +64,13 @@ public class HomeController {
     public String createUser(@ModelAttribute User user){
         wishService.addUser(user);
         return "redirect:/index";
+    }
+
+    @PostMapping("/createWishlist")
+    public String createWishlist(@ModelAttribute Wishlist wishlist, HttpServletRequest request){
+        String username = (String) request.getSession().getAttribute("username");
+        wishService.addWishlist(wishlist,username);
+        return "redirect:/userpage";
     }
 
     @GetMapping("/viewWishList/{wishlist_id}")

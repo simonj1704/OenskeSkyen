@@ -55,4 +55,10 @@ public class WishRepo {
         template.update(sql, wish.getId(), wish.getWish_name(), wish.getWish_price(), wishlist_id, false);
         //TODO make it possible to choose reserved status. Add checkbox.
     }
+
+    public void addWishlist(Wishlist wishlist, String username){
+        String sql = "INSERT INTO wishlist (wishlist_name, user_id) VALUES (?, (SELECT user_id FROM users WHERE username = ?))";
+        template.update(sql, wishlist.getWishlist_name(), username);
+    }
+    //todo make add methods return boolean whether it worked or not
 }
