@@ -7,10 +7,7 @@ import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class HomeController {
@@ -30,7 +27,7 @@ public class HomeController {
             model.addAttribute("user", wishService.getUser(username));
             session.setAttribute("username", username);
             session.setAttribute("isLoggedIn", true);
-            return "/userpage";
+            return "redirect:/userpage";
         } else {
             model.addAttribute("error", "Forkert Brugernavn eller Adgangskode   ");
             return "index";
@@ -44,9 +41,9 @@ public class HomeController {
         if (isLoggedIn == null || !isLoggedIn) {
             return "redirect:/login";
         } else {
-
-            model.addAttribute("user",
-                    wishService.getUser((String) session.getAttribute("username")));
+            String username = (String) session.getAttribute("username");
+            model.addAttribute("user", wishService.getUser(username));
+            model.addAttribute("wishlist", wishService.fetchWishList(username));
             return "userpage";
         }
     }
@@ -54,5 +51,10 @@ public class HomeController {
     public String createUser(@ModelAttribute User user){
         wishService.addUser(user);
         return "redirect: index";
+    }
+
+    @GetMapping("/viewWishList/{id}")
+    public String viewWishList(@PathVariable("id") int id, Model model){
+        return "wishList";
     }
 }
