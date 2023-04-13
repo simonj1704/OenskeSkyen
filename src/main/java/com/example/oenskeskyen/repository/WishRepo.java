@@ -2,6 +2,7 @@ package com.example.oenskeskyen.repository;
 
 import com.example.oenskeskyen.model.User;
 import com.example.oenskeskyen.model.Wish;
+import com.example.oenskeskyen.model.Wishlist;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -42,5 +43,11 @@ public class WishRepo {
         String sql = "INSERT INTO users (user_id, first_name, last_name, email, username, passcode) VALUES(?,?,?,?,?,?)";
         template.update(sql, user.getUser_id(), user.getFirst_name(), user.getLast_name(), user.getEmail(),
                 user.getUsername(), user.getPasscode());
+    }
+
+    public List<Wishlist> fetchAllWishlist(String username){
+        String sql = "SELECT * FROM wishlist WHERE user_id =(SELECT user_id FROM users WHERE username = ?)";
+        RowMapper<Wishlist> rowMapper = new BeanPropertyRowMapper<>(Wishlist.class);
+        return template.query(sql, rowMapper, username);
     }
 }
