@@ -42,7 +42,7 @@ public class HomeController {
         HttpSession session = request.getSession();
         Boolean isLoggedIn = (Boolean) session.getAttribute("isLoggedIn");
         if (isLoggedIn == null || !isLoggedIn) {
-            return "redirect:/login";
+            return "redirect:/index";
         } else {
             String username = (String) session.getAttribute("username");
             model.addAttribute("user", wishService.getUser(username));
@@ -53,10 +53,8 @@ public class HomeController {
 
     @GetMapping("/logout")
     public String logout(HttpServletRequest request){
-        HttpSession session = request.getSession(false);
-        if (session != null){
-            session.invalidate();
-        }
+        HttpSession session = request.getSession();
+        session.setAttribute("isLoggedIn", false);
         return "redirect:/index";
     }
 

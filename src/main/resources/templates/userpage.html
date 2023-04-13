@@ -10,17 +10,12 @@
 <body>
 <header>
     <h1 > <a th:href="@{userpage}" class="UP_link">Wishing World</a></h1>
-    <nav>
-        <ul class="menu">
-            <li><a th:href="@{index}" class="front_link">Forside</a></li>
-        </ul>
-    </nav>
     <div class="profile">
     <p>Velkommen <span th:text="${user.first_name}"></span>!</p>
         <div class="dropdown">
             <img src="styles/images/Profile.jpg" alt="Profile" style="height: 50px">
             <div class="dropdown-content">
-                <a th:href="@{logout}" th:method="post">Log ud</a>
+                <a th:href="@{logout}">Log ud</a>
             </div>
         </div>
 
