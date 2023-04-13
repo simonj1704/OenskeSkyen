@@ -1,5 +1,6 @@
 package com.example.oenskeskyen.controller;
 
+
 import com.example.oenskeskyen.model.User;
 import com.example.oenskeskyen.service.WishService;
 import jakarta.servlet.http.HttpServletRequest;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 public class HomeController {
     @Autowired
     WishService wishService;
+
 
     @GetMapping("/index")
     public String index(){

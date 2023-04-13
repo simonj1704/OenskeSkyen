@@ -10,7 +10,6 @@ public class User {
     //todo use hashing to store passwords
     //todo advanced to use random salts
 
-
     public User(int user_id, String first_name, String last_name, String email, String username, String passcode) {
         this.user_id = user_id;
         this.first_name = first_name;
