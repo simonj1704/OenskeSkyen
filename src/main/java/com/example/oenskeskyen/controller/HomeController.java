@@ -61,7 +61,7 @@ public class HomeController {
     @PostMapping("createUser")
     public String createUser(@ModelAttribute User user){
         wishService.addUser(user);
-        return "redirect: index";
+        return "redirect:/index";
     }
 
     @GetMapping("/viewWishList/{wishlist_id}")
