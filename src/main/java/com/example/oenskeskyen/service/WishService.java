@@ -14,8 +14,8 @@ public class WishService {
     @Autowired
     WishRepo wishRepo;
 
-    public List<Wish> fetchAllWishes() {
-        return wishRepo.fetchAllWishes();
+    public List<Wish> fetchAllWishes(int wishlist_id) {
+        return wishRepo.fetchAllWishes(wishlist_id);
     }
 
     public List<User> fetchAllUsers(){return wishRepo.fetchAllUsers();}

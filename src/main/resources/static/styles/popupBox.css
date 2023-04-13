@@ -41,7 +41,7 @@
 }
 
 .popup {
-    margin: 70px auto;
+    margin: 100px auto;
     padding: 20px;
     background: #fff;
     border-radius: 5px;
@@ -80,4 +80,34 @@
     .popup{
         width: 70%;
     }
+}
+.form_box form{
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-family: Arial;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 85px;
+    padding-right: 85px;
+    border-width: 1px;
+    border-color: grey;
+    text-align: left;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+input [type=text]{
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-family: Arial;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 85px;
+    padding-right: 85px;
+    border-width: 1px;
+    border-color: grey;
+    text-align: left;
 }

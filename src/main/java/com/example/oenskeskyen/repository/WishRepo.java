@@ -17,10 +17,10 @@ public class WishRepo {
     @Autowired
     JdbcTemplate template;
 
-    public List<Wish> fetchAllWishes(){
-        String sql = "SELECT * FROM wishes";
+    public List<Wish> fetchAllWishes(int wishlist_id){
+        String sql = "SELECT * FROM wish WHERE wishlist_id = ?";
         RowMapper<Wish> rowMapper = new BeanPropertyRowMapper<>(Wish.class);
-        return template.query(sql, rowMapper);
+        return template.query(sql, rowMapper, wishlist_id);
     }
 
     public List<User> fetchAllUsers(){
