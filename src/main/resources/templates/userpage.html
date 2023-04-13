@@ -5,18 +5,19 @@
     <title>User Page</title>
     <link rel="stylesheet" type="text/css" href="/styles/userpage.css">
     <link rel="stylesheet" type="text/css" href="../static/styles/userpage.css">
+    <link rel="stylesheet" type="text/css" href="/styles/popupBox.css">
 
 </head>
 <body>
 <header>
-    <h1 > <a th:href="@{userpage}" class="UP_link">Wishing World</a></h1>
+    <h1><a th:href="@{userpage}" class="UP_link">Wishing World</a></h1>
     <nav>
         <ul class="menu">
             <li><a th:href="@{index}" class="front_link">Forside</a></li>
         </ul>
     </nav>
     <div class="profile">
-    <p>Velkommen <span th:text="${user.first_name}"></span>!</p>
+        <p>Velkommen <span th:text="${user.first_name}"></span>!</p>
         <img src="styles/images/Profile.jpg" alt="Profile" style="height: 50px">
     </div>
 </header>
@@ -33,10 +34,24 @@
                 </div>
             </a>
         </div>
-        <div class="new_card">
-            <img src="styles/images/plus_icon.jpg" alt="New Wishlist" style="width: 100%">
-            <div class="card_container">
-                <h4><b>New WishList</b></h4>
+        <a href="#new_wish_popup">
+            <div class="new_card">
+                <img src="styles/images/plus_icon.jpg" alt="New Wishlist" style="width: 100%">
+                <div class="card_container">
+                    <h4><b>New WishList</b></h4>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div id="new_wish_popup" class="overlay">
+        <div class="popup">
+            <h2>Create new Wishlist</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="input_box">
+                <form action="/createWishlist" method="post">
+                    <input type="text" name="wishlist_name" placeholder="Wishlist Name">
+                    <input type="submit" value="Opret" class="login_button">
+                </form>
             </div>
         </div>
     </div>
