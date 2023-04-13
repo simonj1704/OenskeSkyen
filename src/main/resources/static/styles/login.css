@@ -14,7 +14,6 @@ body {
     color: ghostwhite;
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
-
 }
 
 main{
@@ -67,6 +66,34 @@ main{
     color: darkgrey;
 }
 
+.opret_button{
+    border-color: #5a4a94;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 3px;
+    font-size: 30px;
+    padding: 0 16px;
+    font-family: Arial;
+    text-decoration: none;
+    color: white;
+    -webkit-text-stroke: 1px #5a4a94;
+    text-shadow:
+            3px 3px 0 #806ad0,
+            -1px -1px 0 #806ad0,
+            1px -1px 0 #806ad0,
+            -1px 1px 0 #806ad0,
+            1px 1px 0 #806ad0;
+}
+
+.opret_button:hover{
+    background-color: ghostwhite;
+    color: ghostwhite;
+}
+.opret_button:active{
+    background-color: lightgrey;
+    color: lightgrey;
+}
+
 .login_button{
     background-color: #5a4a94;
     border: none;
@@ -78,6 +105,13 @@ main{
     height: 50px;
     font-family: Arial;
     color: white;
+    text-decoration: none;
+    text-shadow:
+            3px 3px 0 #806ad0,
+            -1px -1px 0 #806ad0,
+            1px -1px 0 #806ad0,
+            -1px 1px 0 #806ad0,
+            1px 1px 0 #806ad0;
 }
 
 .login_button:hover{
