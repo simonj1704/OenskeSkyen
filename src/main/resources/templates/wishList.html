@@ -6,5 +6,19 @@
 </head>
 <body>
 <h1>WishList</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Navn</th>
+            <th>Pris</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="wish: ${wishes}">
+            <td th:text="${wish.wish_name}"/>
+            <td th:text="${wish.wish_price}"/>
+        </tr>
+    </tbody>
+</table>
 </body>
 </html>

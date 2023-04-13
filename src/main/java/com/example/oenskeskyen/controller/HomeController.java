@@ -1,6 +1,7 @@
 package com.example.oenskeskyen.controller;
 
 import com.example.oenskeskyen.model.User;
+import com.example.oenskeskyen.model.Wish;
 import com.example.oenskeskyen.service.WishService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
@@ -8,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Controller
 public class HomeController {
@@ -63,8 +66,11 @@ public class HomeController {
         return "redirect: index";
     }
 
-    @GetMapping("/viewWishList/{id}")
-    public String viewWishList(@PathVariable("id") int id, Model model){
+    @GetMapping("/viewWishList/{wishlist_id}")
+    public String viewWishList(@PathVariable("wishlist_id") int wishlist_id, Model model){
+        List<Wish> wishList = wishService.fetchAllWishes(wishlist_id);
+        model.addAttribute("wishes", wishList);
         return "wishList";
     }
+
 }
