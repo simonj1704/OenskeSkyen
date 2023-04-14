@@ -19,8 +19,15 @@ public class HomeController {
     WishService wishService;
 
     @GetMapping("/index")
-    public String index() {
-        return "index";
+    public String index(HttpServletRequest request, Model model){
+        HttpSession session = request.getSession();
+        if(wishService.userAlreadyExist((String) session.getAttribute("tried_username"))){
+            model.addAttribute("show_popup1", true);
+            model.addAttribute("error_username", "Username already exists");
+            return "index";
+        } else {
+            return "index";
+        }
     }
 
     @PostMapping("/index")
@@ -33,7 +40,7 @@ public class HomeController {
             session.setAttribute("isLoggedIn", true);
             return "redirect:/userpage";
         } else {
-            model.addAttribute("error", "Forkert Brugernavn eller Adgangskode   ");
+            model.addAttribute("error", "Forkert Brugernavn eller Adgangskode");
             return "index";
         }
     }
@@ -68,11 +75,19 @@ public class HomeController {
         return "redirect:/index";
     }
 
-    @PostMapping("createUser")
-    public String createUser(@ModelAttribute User user) {
-        wishService.addUser(user);
-        return "redirect:/index";
+    @PostMapping("/createUser")
+    public String createUser(@ModelAttribute User user, Model model, HttpServletRequest request){
+        if (wishService.userAlreadyExist(user.getUsername())){
+            HttpSession session = request.getSession();
+            session.setAttribute("tried_username", user.getUsername());
+            return "redirect:/index#popup1";
+        } else {
+            wishService.addUser(user);
+            return "redirect:/index";
+
+        }
     }
+
 
     @PostMapping("/createWishlist")
     public String createWishlist(@ModelAttribute Wishlist wishlist, HttpServletRequest request) {
@@ -94,4 +109,5 @@ public class HomeController {
         wishService.addWishToWishlist(wish, wishlist_id);
         return "redirect:/viewWishList/" + wishlist_id;
     }
+
 }

@@ -26,6 +26,7 @@
         </form>
         <span th:text="${error}" class="wrong_userInput"></span>
     </div>
+
     <div id="popup1" class="overlay">
         <div class="popup">
             <h2>Indtast oplysninger</h2>
@@ -37,8 +38,11 @@
                     <input type="text" class="email" name="email" placeholder="E-mailadresse">
                     <input type="text" class="username" name="username" placeholder="Brugernavn">
                     <input type="text" class="password" name="passcode" placeholder="Adgangskode">
+                    <input type="submit" value="Opret" class="login_button">
                 </form>
-                <input type="submit" value="Opret" class="login_button">
+                <div th:if="${show_popup1}">
+                <span th:text="${error_username}" class="wrong_userInput"></span>
+                </div>
             </div>
         </div>
     </div>

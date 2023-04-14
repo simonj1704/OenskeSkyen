@@ -34,6 +34,11 @@ public class WishRepo {
         return template.queryForObject(sql, Integer.class,username, password) > 0;
     }
 
+    public boolean userAlreadyExist(String username){
+        String sql = "SELECT COUNT(*) FROM users WHERE username = ?";
+        return template.queryForObject(sql, Integer.class, username) > 0;
+    }
+
     public User getUser(String username){
         String sql = "SELECT * FROM users WHERE username = ?";
         RowMapper<User> rowMapper = new BeanPropertyRowMapper<>(User.class);
