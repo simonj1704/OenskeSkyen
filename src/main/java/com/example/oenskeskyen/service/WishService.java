@@ -40,4 +40,7 @@ public class WishService {
     public void addWishlist(Wishlist wishlist, String username){
         wishRepo.addWishlist(wishlist, username);
     }
+    public boolean userAlreadyExist(String username){
+        return wishRepo.userAlreadyExist(username);
+    }
 }

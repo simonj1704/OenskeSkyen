@@ -6,9 +6,7 @@ public class Wish {
     private int id;
     private String wish_name;
     private String wish_link;
-
-
-    private int wish_price;
+    private double wish_price;
     private boolean reserved;
 
     public Wish(int id, String wish_name, int wish_price, String wish_link, boolean reserved) {
@@ -21,11 +19,11 @@ public class Wish {
 
     public Wish(){
     }
-    public int getWish_price() {
+    public double getWish_price() {
         return wish_price;
     }
 
-    public void setWish_price(int wish_price) {
+    public void setWish_price(double wish_price) {
         this.wish_price = wish_price;
     }
 
