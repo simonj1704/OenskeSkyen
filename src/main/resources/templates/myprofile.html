@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Min Profil</title>
+    <link rel="stylesheet" type="text/css" href="/styles/myprofile.css">
+</head>
+<body>
+<div class="main-table">
+    <p>User Name: <span th:text="${user.username}"></span></p>
+    <p>Password: <span th:text="${user.passcode}"></span></p>
+    <p>User ID: <span th:text="${user.user_id}"></span></p>
+    <p>First name: <span th:text="${user.first_name}"></span></p>
+    <p>Last name: <span th:text="${user.last_name}"></span></p>
+    <p>Email: <span th:text="${user.email}"></span></p>
+</div>
+</body>
+</html>
