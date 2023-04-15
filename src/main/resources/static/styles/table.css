@@ -1,6 +1,8 @@
 table{
     border-collapse: collapse;
-    width: 40%;
+    width: 60%;
+    position: absolute;
+    margin-top: 100px;
 }
 tr:nth-child(even){
     background-color: lightgrey;
@@ -12,4 +14,6 @@ td, th{
     border: 1px solid black;
     text-align: left;
     padding: 4px;
+    font-size: 38px;
+
 }

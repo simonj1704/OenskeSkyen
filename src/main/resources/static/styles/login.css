@@ -1,29 +1,5 @@
-body {
-    margin: 0px;
-    background-image: url("https://images.pexels.com/photos/220118/pexels-photo-220118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
-
-}
-
-.menu_bar{
-    text-align: center;
-    margin: 0px;
-    border-color: #506685;
-    background-color: #5a4a94;
-    font-size: 58px;
-    font-family: Arial;
-    color: ghostwhite;
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
-}
-
 main{
     text-align: center;
-}
-
-.grid-container{
-    display: grid;
-    grid-template-columns: repeat(3, 2px);
-    grid-template-rows: repeat(3, 2px);
 }
 
 .top-bar{
@@ -31,96 +7,56 @@ main{
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
     box-sizing: border-box;
-    margin: 40px 0 0;
-    padding: 0px 0 28px;
+    padding: 0 0 48px;
     width: 596px;
-    margin-top: 150px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: -200px auto 0;
     alignment: center;
-}
-
-.login_credentials{
-    background: #FFFFFF;
-    border: 1px solid #dddfe2;
-    color: #1d2129;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 12px;
-    height: 22px;
-    line-height: 16px;
-    padding: 0 8px;
-    vertical-align: middle;
-}
-
-.front_link{
-    color: white;
-    text-decoration: none;
-}
-
-.front_link:hover{
-    color: lightgrey;
-    cursor: pointer;
-}
-
-.front_link:active{
-    color: darkgrey;
+    position: relative;
+    top: 50%;
 }
 
 .opret_button{
-    border-color: #5a4a94;
+    border-color: #9eb25d;
     border-radius: 20px;
     border-style: solid;
     border-width: 3px;
     font-size: 30px;
     padding: 0 16px;
-    font-family: Arial;
+    font-family: Arial, serif;
     text-decoration: none;
     color: white;
-    -webkit-text-stroke: 1px #5a4a94;
-    text-shadow:
-            3px 3px 0 #806ad0,
-            -1px -1px 0 #806ad0,
-            1px -1px 0 #806ad0,
-            -1px 1px 0 #806ad0,
-            1px 1px 0 #806ad0;
+    -webkit-text-stroke: 2px #9eb25d;
 }
 
 .opret_button:hover{
-    background-color: ghostwhite;
-    color: ghostwhite;
+    background-color: #9eb25d;
 }
 .opret_button:active{
-    background-color: lightgrey;
-    color: lightgrey;
+    background-color: #74843f;
 }
 
 .login_button{
-    background-color: #5a4a94;
+    background-color: #9eb25d;
     border: none;
     border-radius: 14px;
     font-size: 30px;
     line-height: 48px;
     padding: 0 26px;
+    margin-right: 10px;
     width: 432px;
     height: 50px;
-    font-family: Arial;
+    font-family: Arial, serif;
     color: white;
     text-decoration: none;
-    text-shadow:
-            3px 3px 0 #806ad0,
-            -1px -1px 0 #806ad0,
-            1px -1px 0 #806ad0,
-            -1px 1px 0 #806ad0,
-            1px 1px 0 #806ad0;
 }
 
 .login_button:hover{
     cursor: pointer;
-    background-color: #6d5ab3;
+    background-color: #74843f;
 }
 
 .login_button:active{
-    background-color: #806ad0;
+    background-color: #3f5026;
 }
 
 .input_box{
@@ -130,54 +66,24 @@ main{
     alignment: top;
 }
 
-.password_input{
+.password_input, .username_input{
     border-radius: 6px;
     margin-bottom: 10px;
-    font-family: Arial;
+    font-family: Arial, serif;
     font-size: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 85px;
-    padding-right: 85px;
-    border-width: 1px;
-    border-color: grey;
-    text-align: left;
-}
-
-.UP_link{
-    color: white;
-    text-decoration: none;
-}
-
-.username_input{
-    border-radius: 6px;
-    margin-bottom: 10px;
-    font-family: Arial;
-    font-size: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 85px;
-    padding-right: 85px;
+    padding: 10px 85px;
     border-width: 1px;
     border-color: grey;
     text-align: left;
 }
 
 .wrong_userInput{
-    font-family: Arial;
-}
-
-.UP_link:hover{
-    color: lightgrey;
-    cursor: pointer;
-}
-
-.UP_link:active{
-    color: darkgrey;
-}
-
-.icon_menuBar{
-    width: 64px;
-    height: 64px;
-    padding-left: 40px;
+    font-family: Arial, serif;
+    font-size: 20px;
+    margin-top: 10px;
+    color: darkred;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
 }

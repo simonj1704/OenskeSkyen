@@ -4,28 +4,24 @@
     <meta charset="UTF-8">
     <title>User Page</title>
     <link rel="stylesheet" type="text/css" href="/styles/userpage.css">
-    <link rel="stylesheet" type="text/css" href="../static/styles/userpage.css">
     <link rel="stylesheet" type="text/css" href="/styles/popupBox.css">
-
+    <link rel="stylesheet" type="text/css" href="/styles/menuHead.css">
+    <link rel="icon" type="image/png" href="/styles/images/W_Emblem.png">
 </head>
 <body>
 <header>
-    <h1 > <a th:href="@{userpage}" class="UP_link">Wishing World</a></h1>
-    <nav>
-        <ul class="menu">
-            <li><a th:href="@{index}" class="front_link">Forside</a></li>
-        </ul>
-    </nav>
-    <div class="profile">
-    <p>Velkommen <span th:text="${user.first_name}"></span>!</p>
-        <div class="dropdown">
-            <img src="styles/images/Profile.jpg" alt="Profile" style="height: 50px">
-            <div class="dropdown-content">
-                <a th:href="@{logout}">Log ud</a>
+    <div class="box_menuBar">
+        <img src="/styles/images/WishWorld_Icon.png" alt="E" class="icon_menuBar">
+        <div class="profile">
+            <p>Velkommen <span th:text="${user.first_name}"></span>!</p>
+            <div class="dropdown">
+                <img src="styles/images/Profile.jpg" alt="Profile" style="height: 50px">
+                <div class="dropdown-content">
+                    <a th:href="@{logout}">Log ud</a>
+                </div>
             </div>
         </div>
     </div>
-
 </header>
 <main>
     <h1>WishLists</h1>

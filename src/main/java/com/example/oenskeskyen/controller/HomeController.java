@@ -86,4 +86,11 @@ public class HomeController {
         return "redirect:/viewWishList/" + wishlist_id;
     }
 
+    @GetMapping("/shareWishList/{wishlist_id}")
+    public String shareWishList(@PathVariable("wishlist_id") int wishlist_id, Model model){
+        List<Wish> shareWishList = wishService.fetchAllWishes(wishlist_id);
+        model.addAttribute("wishes", shareWishList);
+        model.addAttribute("wishlist", wishlist_id);
+        return "shareWishList";
+    }
 }

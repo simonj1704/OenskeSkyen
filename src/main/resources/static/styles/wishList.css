@@ -1,0 +1,16 @@
+.wish_Button{
+    background-color: #9eb25d;
+    border: none;
+    border-radius: 14px;
+    font-size: 30px;
+    line-height: 48px;
+    padding: 0 26px;
+    margin: 10px;
+    width: 332px;
+    height: 50px;
+    font-family: Arial, serif;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    left: 50px;
+}
