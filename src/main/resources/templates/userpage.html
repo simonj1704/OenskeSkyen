@@ -4,37 +4,31 @@
     <meta charset="UTF-8">
     <title>User Page</title>
     <link rel="stylesheet" type="text/css" href="/styles/userpage.css">
-    <link rel="stylesheet" type="text/css" href="../static/styles/userpage.css">
+    <link rel="stylesheet" type="text/css" href="/styles/menuHead.css">
     <link rel="stylesheet" type="text/css" href="/styles/popupBox.css">
-
 </head>
 <body>
 <header>
-    <h1 > <a th:href="@{userpage}" class="UP_link">Wishing World</a></h1>
-    <nav>
-        <ul class="menu">
-            <li><a th:href="@{index}" class="front_link">Forside</a></li>
-        </ul>
-    </nav>
-    <div class="profile">
-    <p>Velkommen <span th:text="${user.first_name}"></span>!</p>
-        <div class="dropdown">
-            <img src="styles/images/Profile.jpg" alt="Profile" style="height: 50px">
-            <div class="dropdown-content">
-                <a th:href="@{myprofile}">Min Profil</a>
-                <a th:href="@{logout}">Log ud</a>
+    <div class="box_menuBar">
+        <img src="/styles/images/WishWorld_Icon.png" alt="E" class="icon_menuBar">
+        <div class="profile">
+            <div class="dropdown">
+                <img src="styles/images/Profile.jpg" alt="Profile" class="dropdown_icon">
+                <div class="dropdown-content">
+                    <a th:href="@{myprofile}">Min Profil</a>
+                    <a th:href="@{logout}">Log ud</a>
+                </div>
             </div>
+            <p class="welcome_text">Velkommen <span th:text="${user.first_name}"></span>!</p>
         </div>
     </div>
-
 </header>
 <main>
-    <h1>WishLists</h1>
     <div class="wish_lists">
         <div th:each="list: ${wishlist}">
             <a th:href="@{'/viewWishList/' + ${list.wishlist_id}}">
                 <div class="card">
-                    <img src="styles/images/wish.jpg" alt="Card Picture" style="width: 100%">
+                    <img src="styles/images/W_Emblem.png" alt="Card Picture" style="width: 100%">
                     <div class="card_container">
                         <span th:text="${list.wishlist_name}"></span>
                     </div>
@@ -45,19 +39,19 @@
             <div class="new_card">
                 <img src="styles/images/plus_icon.jpg" alt="New Wishlist" style="width: 100%">
                 <div class="card_container">
-                    <h4><b>New WishList</b></h4>
+                    <span>New WishList</span>
                 </div>
             </div>
         </a>
     </div>
     <div id="new_wish_popup" class="overlay">
         <div class="popup">
-            <h2>Create new Wishlist</h2>
+            <h2>Ny Ønskeliste</h2>
             <a class="close" href="#">&times;</a>
             <div class="input_box">
                 <form action="/createWishlist" method="post">
-                    <input type="text" name="wishlist_name" placeholder="Wishlist Name">
-                    <input type="submit" value="Opret" class="login_button">
+                    <input type="text" name="wishlist_name" placeholder="Navngiv Ønskeliste" class="newList_label">
+                    <input type="submit" value="Opret" class="newList_button">
                 </form>
             </div>
         </div>

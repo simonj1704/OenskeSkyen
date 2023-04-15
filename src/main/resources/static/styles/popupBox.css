@@ -2,7 +2,6 @@
 .box {
     width: 40%;
     margin: 0 auto;
-    background: rgba(255,255,255,0.2);
     padding: 35px;
     border: 2px solid #fff;
     border-radius: 20px/50px;
@@ -30,7 +29,6 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.7);
     transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
@@ -43,8 +41,8 @@
 .popup {
     margin: 100px auto;
     padding: 20px;
-    background: #fff;
-    border-radius: 5px;
+    background: lightgrey;
+    border-radius: 12px;
     position: relative;
     transition: all 2s ease-in-out;
 }
@@ -127,4 +125,39 @@ input [type=text]{
     border-width: 1px;
     border-color: grey;
     text-align: left;
+}
+
+.newList_label{
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-family: Arial, serif;
+    font-size: 30px;
+    padding: 10px 45px;
+    border-width: 1px;
+    border-color: grey;
+    text-align: left;
+}
+
+.newList_button{
+    background-color: #9eb25d;
+    border: none;
+    border-radius: 14px;
+    font-size: 20px;
+    line-height: 48px;
+    padding: 0 26px;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 50px;
+    font-family: Arial, serif;
+    color: white;
+    text-decoration: none;
+}
+
+.newList_button:hover{
+    cursor: pointer;
+    background-color: #74843f;
+}
+
+.newList_button:active{
+    background-color: #3f5026;
 }
