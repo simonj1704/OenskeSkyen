@@ -29,7 +29,7 @@
         <div th:each="list: ${wishlist}">
             <a th:href="@{'/viewWishList/' + ${list.wishlist_id}}">
                 <div class="card">
-                    <img src="styles/images/wish.jpg" alt="Card Picture" style="width: 100%">
+                    <img src="styles/images/W_Emblem.png" alt="Card Picture" style="width: 100%">
                     <div class="card_container">
                         <span th:text="${list.wishlist_name}"></span>
                     </div>

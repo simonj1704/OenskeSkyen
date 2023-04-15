@@ -1,19 +1,23 @@
 main{
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 
 .top-bar{
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
     box-sizing: border-box;
-    padding: 0 0 48px;
-    width: 596px;
-    margin: -200px auto 0;
+    padding: 35px;
+    width: 696px;
     alignment: center;
-    position: relative;
-    top: 50%;
+    margin-left: 50%;
+    margin-top: 40%;
 }
+
 
 .opret_button{
     border-color: #9eb25d;
@@ -42,7 +46,7 @@ main{
     font-size: 30px;
     line-height: 48px;
     padding: 0 26px;
-    margin-right: 10px;
+    margin-bottom: 10px;
     width: 432px;
     height: 50px;
     font-family: Arial, serif;
@@ -61,8 +65,7 @@ main{
 
 .input_box{
     border-radius: 14px;
-    padding-top: 25px;
-    padding-bottom: 30px;
+    padding-bottom: 22px;
     alignment: top;
 }
 
