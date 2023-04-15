@@ -25,7 +25,7 @@
 }
 
 .overlay {
-    position: fixed;
+    position: relative;
     top: 0;
     bottom: 0;
     left: 0;
@@ -45,7 +45,6 @@
     padding: 20px;
     background: #fff;
     border-radius: 5px;
-    width: 30%;
     position: relative;
     transition: all 2s ease-in-out;
 }
@@ -81,23 +80,6 @@
         width: 70%;
     }
 }
-.form_box form{
-    border-radius: 6px;
-    margin-bottom: 10px;
-    font-family: Arial;
-    font-size: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 85px;
-    padding-right: 85px;
-    border-width: 1px;
-    border-color: grey;
-    text-align: left;
-    box-sizing: border-box;
-    justify-content: flex-start;
-    display: flex;
-    flex-direction: column;
-}
 
 .fname, .lname, .email, .username, .password{
     margin-bottom: 10px;
@@ -109,6 +91,28 @@
     line-height: 16px;
     padding: 5px 80px;
     vertical-align: middle;
+}
+
+.form_box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background: #FFFFFF;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    font-family: Arial;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 85px;
+    padding-right: 85px;
+    text-align: left;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
 }
 
 input [type=text]{

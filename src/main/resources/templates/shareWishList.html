@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wish World</title>
+    <link rel="stylesheet" type="text/css" href="/styles/menuHead.css">
+    <link rel="stylesheet" type="text/css" href="/styles/shareWishList.css">
+    <link rel="icon" type="image/png" href="/styles/images/W_Emblem.png">
+</head>
+<body>
+<div class="box_menuBar">
+    <img src="/styles/images/WishWorld_Icon.png" alt="E" class="icon_menuBar">
+</div>
+<div class="box_wishes">
+    <table>
+        <thead>
+        <tr>
+            <th>Ønske: </th>
+            <th>Pris:</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="wish: ${wishes}">
+            <td th:text="${wish.wish_name}"></td>
+            <td th:text="${wish.wish_price}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
