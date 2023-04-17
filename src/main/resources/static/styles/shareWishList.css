@@ -1,9 +1,9 @@
 table {
     border-collapse: collapse;
-    width: 80%;
+    width: 60%;
     position: absolute;
-    top: calc(100px + 7%);
-    left: 10%;
+    top: calc(100px + 45%);
+    left: 4%;
     background-color: lightgrey;
     border-bottom: 1px solid #81914a;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
@@ -14,6 +14,7 @@ th, td {
     text-align: left;
     border-bottom: 1px solid #ddd;
     font-size: 48px;
+    font-family: Arial, serif;
     padding: 10px;
     padding-right: 40px;
 }
@@ -24,4 +25,8 @@ tr{
 
 th {
     background-color: lightgrey;
+}
+
+.box_wishes{
+    margin-top: 300px;
 }
