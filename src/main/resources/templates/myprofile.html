@@ -8,7 +8,16 @@
 </head>
 <header>
     <div class="box_menuBar">
-        <a th:href="@{userpage}"><img src="/styles/images/WishWorld_Icon.png" alt="E" class="icon_menuBar"></a>
+        <a th:href="@{/userpage}"><img src="/styles/images/WishWorld_Icon.png" alt="E" class="icon_menuBar"></a>
+        <div class="profile">
+            <div class="dropdown">
+                <img src="/styles/images/Profile.jpg" alt="Profile" class="dropdown_icon">
+                <div class="dropdown-content">
+                    <a th:href="@{myprofile}">Min Profil</a>
+                    <a th:href="@{logout}">Log ud</a>
+                </div>
+            </div>
+        </div>
     </div>
 </header>
 <body>
