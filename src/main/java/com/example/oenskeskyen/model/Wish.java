@@ -3,7 +3,7 @@ package com.example.oenskeskyen.model;
 
 public class Wish {
 
-    private int id;
+    private int wish_id;
     private String wish_name;
     private String wish_link;
 
@@ -11,8 +11,8 @@ public class Wish {
     private int wish_price;
     private boolean reserved;
 
-    public Wish(int id, String wish_name, int wish_price, String wish_link, boolean reserved) {
-        this.id = id;
+    public Wish(int wish_id, String wish_name, int wish_price, String wish_link, boolean reserved) {
+        this.wish_id = wish_id;
         this.wish_name = wish_name;
         this.wish_price = wish_price;
         this.wish_link = wish_link;
@@ -29,12 +29,12 @@ public class Wish {
         this.wish_price = wish_price;
     }
 
-    public int getId() {
-        return id;
+    public int getWish_id() {
+        return wish_id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setWish_id(int wish_id) {
+        this.wish_id = wish_id;
     }
 
     public String getWish_name() {

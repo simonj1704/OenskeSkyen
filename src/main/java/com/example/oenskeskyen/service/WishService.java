@@ -40,4 +40,13 @@ public class WishService {
     public void addWishlist(Wishlist wishlist, String username){
         wishRepo.addWishlist(wishlist, username);
     }
+    public Boolean deleteWish(int wish_id){
+       return wishRepo.deleteWish(wish_id);
+    }
+    public void updateWish(int id, Wish wish){
+        wishRepo.updateWish(id,wish);
+    }
+    public Boolean deleteWishList(int wishlist_id){
+        return wishRepo.deleteWishList(wishlist_id);
+    }
 }

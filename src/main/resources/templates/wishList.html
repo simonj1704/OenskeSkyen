@@ -3,40 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <title>Wishlist</title>
-    <link rel="stylesheet" type="text/css" href="/styles/login.css">
-    <link rel="stylesheet" type="text/css" href="../static/styles/login.css">
+    <!--<link rel="stylesheet" type="text/css" href="/styles/login.css">
+    <link rel="stylesheet" type="text/css" href="../static/styles/login.css">-->
     <link rel="stylesheet" type="text/css" href="/styles/popupBox.css">
     <link rel="stylesheet" type="text/css" href="/styles/table.css">
 </head>
 <body>
-<h1>WishList</h1>
-<table id>
-    <thead>
-        <tr>
-            <th>Navn</th>
-            <th>Pris</th>
-            <a class="login_button" href="#popup2">Tilføj ønske</a>
-            <div id="popup2" class="overlay">
-            <div class="popup">
-                <h2>Indtast oplysninger</h2>
-                <a class="close" href="#">&times;</a>
-                <div class="form_box" >
-                    <form th:action="@{'/addWish/' + ${wishlist}}">
-                        <input type="text" name="wish_name" placeholder="Navn">
-                        <input type="text" name="wish_price" placeholder="Pris">
-                        <input type="submit" value="Tilføj" class="login_button">
-                    </form>
-                </div>
+<h1><a href="/userpage" class="UP_link">Wishing World</a></h1>
+<div class="profile">
+    <p>Velkommen <span th:text="${user.first_name}"></span>!</p>
+    <div class="dropdown">
+        <img src="styles/images/Profile.jpg" alt="Profile" style="height: 50px">
+        <div class="dropdown-content">
+            <a href="/logout">Log ud</a>
+        </div>
+    </div>
+</div>
+<main>
+    <h1>WishList</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Navn</th>
+                <th>Pris</th>
+                <a class="login_button" href="#popup2">Tilføj ønske</a>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="wish: ${wishes}">
+                <td th:text="${wish.wish_name}"/>
+                <td th:text="${wish.wish_price}"/>
+                <td>
+                    <a th:href="@{'/deleteWish/'+ ${wishlist} + '/'+${wish.wish_id}}">
+                        <button>Slet ønske</button>
+                    </a>
+                    <a class="login_button" href="#popup3">Rediger ønske</a>
+                    <div id="popup3" class="overlay">
+                        <div class="popup">
+                            <h2>Indtast oplysninger</h2>
+                            <a class="close" href="#">&times;</a>
+                            <div class="input_box">
+                                <form th:action="@{'/updateWish/'+ ${wishlist} + '/'+${wish.wish_id}}" method="post">
+                                    <input type="text" name="wish_name" placeholder="Navn på ønsket">
+                                    <input type="text" name="wish_price" placeholder="Pris">
+                                    <input type="text" name="wish_link" placeholder="Link til hjemmeside">
+                                    <input type="submit" value="Gem" class="login_button">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="popup2" class="overlay">
+        <div class="popup">
+            <h2>Indtast oplysninger</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="form_box">
+                <form th:action="@{'/addWish/' + ${wishlist}}">
+                    <input type="text" name="wish_name" placeholder="Navn">
+                    <input type="text" name="wish_price" placeholder="Pris">
+                    <input type="submit" value="Tilføj" class="login_button">
+                </form>
             </div>
         </div>
-        </tr>
-    </thead>
-    <tbody>
-        <tr th:each="wish: ${wishes}">
-            <td th:text="${wish.wish_name}"/>
-            <td th:text="${wish.wish_price}"/>
-        </tr>
-    </tbody>
-</table>
+    </div>
+</main>
 </body>
 </html>

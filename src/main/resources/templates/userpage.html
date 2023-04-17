@@ -11,11 +11,6 @@
 <body>
 <header>
     <h1 > <a th:href="@{userpage}" class="UP_link">Wishing World</a></h1>
-    <nav>
-        <ul class="menu">
-            <li><a th:href="@{index}" class="front_link">Forside</a></li>
-        </ul>
-    </nav>
     <div class="profile">
     <p>Velkommen <span th:text="${user.first_name}"></span>!</p>
         <div class="dropdown">
@@ -31,6 +26,9 @@
     <h1>WishLists</h1>
     <div class="wish_lists">
         <div th:each="list: ${wishlist}">
+            <a th:href="@{'/deleteWishList/' + ${list.wishlist_id}}">
+                <button>Slet ønskeliste</button>
+            </a>
             <a th:href="@{'/viewWishList/' + ${list.wishlist_id}}">
                 <div class="card">
                     <img src="styles/images/wish.jpg" alt="Card Picture" style="width: 100%">
