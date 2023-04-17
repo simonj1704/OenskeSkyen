@@ -7,12 +7,22 @@
     <link rel="stylesheet" type="text/css" href="/styles/table.css">
     <link rel="stylesheet" type="text/css" href="/styles/popupBox.css">
     <link rel="stylesheet" type="text/css" href="/styles/menuHead.css">
+    <link rel="stylesheet" type="text/css" href="/styles/dropdown.css">
     <link rel="icon" type="image/png" href="/styles/images/W_Emblem.png">
 </head>
 <body>
 <header>
     <div class="box_menuBar">
-        <img src="/styles/images/WishWorld_Icon.png" alt="E" class="icon_menuBar">
+        <a th:href="@{/userpage}"><img src="/styles/images/WishWorld_Icon.png" alt="E" class="icon_menuBar"></a>
+        <div class="profile">
+            <div class="dropdown">
+                <img src="/styles/images/Profile.jpg" alt="Profile" class="dropdown_icon">
+                <div class="dropdown-content">
+                    <a th:href="@{myprofile}">Min Profil</a>
+                    <a th:href="@{logout}">Log ud</a>
+                </div>
+            </div>
+        </div>
     </div>
 </header>
 <table id>
