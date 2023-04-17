@@ -27,11 +27,11 @@
             <div class="popup">
                 <h2>Indtast oplysninger</h2>
                 <a class="close" href="#">&times;</a>
-                <div class="form_box">
+                <div class="input_box">
                     <form th:action="@{'/addWish/' + ${wishlist}}">
-                        <input type="text" name="wish_name" placeholder="Navn">
-                        <input type="text" name="wish_price" placeholder="Pris">
-                        <input type="submit" value="Tilføj" class="login_button">
+                        <input type="text" name="wish_name" placeholder="Navn" class="newList_label">
+                        <input type="text" name="wish_price" placeholder="Pris" class="newList_label">
+                        <input type="submit" value="Tilføj" class="newList_button">
                     </form>
                 </div>
             </div>
@@ -40,9 +40,8 @@
             <div class="popup">
                 <h2>Del din Ønskeliste</h2>
                 <a class="close" href="#">&times;</a>
-                <div class="form_box">
-                    <p>Kopier og del</p>
-                    <input type="text" class="password_input" th:value="'http://localhost:5555/shareWishList/' + ${wishlist}" readonly>
+                <div class="input_box">
+                    <input type="text" class="newList_label" th:value="'http://localhost:5555/shareWishList/' + ${wishlist}" readonly>
                 </div>
             </div>
         </div>
