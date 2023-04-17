@@ -27,6 +27,9 @@
 <main>
     <div class="wish_lists">
         <div th:each="list: ${wishlist}">
+            <a th:href="@{'/deleteWishList/' + ${list.wishlist_id}}">
+                <button>Slet ønskeliste</button>
+            </a>
             <a th:href="@{'/viewWishList/' + ${list.wishlist_id}}">
                 <div class="card">
                     <img src="styles/images/W_Emblem.png" alt="Card Picture" style="width: 100%">
@@ -59,19 +62,5 @@
     </div>
 </main>
 <footer></footer>
-<script>
-    window.onscroll = function() {myFunction()};
-
-    var header = document.getElementById("header");
-    var sticky = header.offsetTop;
-
-    function myFunction() {
-        if (window.pageYOffset > sticky) {
-            header.classList.add("sticky");
-        } else {
-            header.classList.remove("sticky");
-        }
-    }
-</script>
 </body>
 </html>
