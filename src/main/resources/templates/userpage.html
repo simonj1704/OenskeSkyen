@@ -6,11 +6,12 @@
     <link rel="stylesheet" type="text/css" href="/styles/userpage.css">
     <link rel="stylesheet" type="text/css" href="/styles/menuHead.css">
     <link rel="stylesheet" type="text/css" href="/styles/popupBox.css">
+    <link rel="stylesheet" type="text/css" href="/styles/dropdown.css">
 </head>
 <body>
 <header>
     <div class="box_menuBar">
-        <img src="/styles/images/WishWorld_Icon.png" alt="E" class="icon_menuBar">
+        <a th:href="@{userpage}"><img src="/styles/images/WishWorld_Icon.png" alt="E" class="icon_menuBar"></a>
         <div class="profile">
             <div class="dropdown">
                 <img src="styles/images/Profile.jpg" alt="Profile" class="dropdown_icon">
@@ -58,5 +59,19 @@
     </div>
 </main>
 <footer></footer>
+<script>
+    window.onscroll = function() {myFunction()};
+
+    var header = document.getElementById("header");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    }
+</script>
 </body>
 </html>
