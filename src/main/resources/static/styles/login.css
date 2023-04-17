@@ -1,4 +1,4 @@
-main{
+main {
     text-align: center;
     display: flex;
     align-items: center;
@@ -6,20 +6,20 @@ main{
 }
 
 
-.top-bar{
+.top-bar {
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    margin: 0px auto;
     box-sizing: border-box;
     padding: 35px;
     width: 696px;
-    alignment: center;
-    margin-left: 50%;
-    margin-top: 40%;
+    margin-left: 115%;
+    margin-top: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
 }
 
 
-.opret_button{
+.opret_button {
     border-color: #9eb25d;
     border-radius: 20px;
     border-style: solid;
@@ -32,14 +32,15 @@ main{
     -webkit-text-stroke: 2px #9eb25d;
 }
 
-.opret_button:hover{
+.opret_button:hover {
     background-color: #9eb25d;
 }
-.opret_button:active{
+
+.opret_button:active {
     background-color: #74843f;
 }
 
-.login_button{
+.login_button {
     background-color: #9eb25d;
     border: none;
     border-radius: 14px;
@@ -54,22 +55,22 @@ main{
     text-decoration: none;
 }
 
-.login_button:hover{
+.login_button:hover {
     cursor: pointer;
     background-color: #74843f;
 }
 
-.login_button:active{
+.login_button:active {
     background-color: #3f5026;
 }
 
-.input_box{
+.input_box {
     border-radius: 14px;
     padding-bottom: 22px;
     alignment: top;
 }
 
-.password_input, .username_input{
+.password_input, .username_input {
     border-radius: 6px;
     margin-bottom: 10px;
     font-family: Arial, serif;
@@ -80,7 +81,7 @@ main{
     text-align: left;
 }
 
-.wrong_userInput{
+.wrong_userInput {
     font-family: Arial, serif;
     font-size: 20px;
     margin-top: 10px;
