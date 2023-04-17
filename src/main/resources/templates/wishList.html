@@ -38,8 +38,11 @@
         </div>
         <div id="popup3" class="overlay">
             <div class="popup">
+                <h2>Del din Ønskeliste</h2>
+                <a class="close" href="#">&times;</a>
                 <div class="form_box">
-                    <input type="text" class="password_input">
+                    <p>Kopier og del</p>
+                    <input type="text" class="password_input" th:value="'http://localhost:5555/shareWishList/' + ${wishlist}" readonly>
                 </div>
             </div>
         </div>

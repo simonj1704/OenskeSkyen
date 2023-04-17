@@ -5,7 +5,7 @@
     font-size: 30px;
     line-height: 48px;
     padding: 0 26px;
-    margin: 10px;
+    margin: 180px 10px;
     width: 332px;
     height: 50px;
     font-family: Arial, serif;
@@ -14,19 +14,26 @@
     position: relative;
     left: 50px;
 }
-.back_button{
-    background-color: #ff6b6b;
-    border: none;
-    border-radius: 14px;
-    font-size: 30px;
-    line-height: 48px;
-    padding: 0 26px;
-    margin: 10px;
-    width: 132px;
-    height: 50px;
-    font-family: Arial, serif;
-    color: white;
-    text-decoration: none;
-    position: relative;
-    left: 50px;
+.back_button {
+            background-color: #ff6b6b;
+            border: none;
+            border-radius: 14px;
+            font-size: 30px;
+            line-height: 48px;
+            padding: 0 26px;
+            margin: 10px;
+            width: 132px;
+            height: 50px;
+            font-family: Arial, serif;
+            color: white;
+            text-decoration: none;
+            position: relative;
+            left: 50px;
+        }
+
+.wish_Button:hover{
+    background-color: #92a64f;
+}
+.wish_Button:active{
+    background-color: #74843f;
 }
