@@ -65,6 +65,26 @@
     <tr th:each="wish: ${wishes}">
         <td th:text="${wish.wish_name}"/>
         <td th:text="${wish.wish_price}"/>
+        <td>
+            <a th:href="@{'/deleteWish/'+ ${wishlist} + '/'+${wish.wish_id}}">
+                <button>Slet ønske</button>
+            </a>
+            <a class="wish_Button" href="#popup4">Rediger ønske</a>
+            <div id="popup4" class="overlay">
+                <div class="popup">
+                    <h2>Indtast oplysninger</h2>
+                    <a class="close" href="#">&times;</a>
+                    <div class="input_box">
+                        <form th:action="@{'/updateWish/'+ ${wishlist} + '/'+${wish.wish_id}}" method="post">
+                            <input type="text" name="wish_name" placeholder="Navn på ønsket">
+                            <input type="text" name="wish_price" placeholder="Pris">
+                            <input type="text" name="wish_link" placeholder="Link til hjemmeside">
+                            <input type="submit" value="Gem" class="login_button">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </td>
     </tr>
     </tbody>
 </table>
