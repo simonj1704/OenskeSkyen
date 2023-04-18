@@ -44,3 +44,26 @@
 .back_button:active{
     background-color: #eb0000;
 }
+
+.delete_wish_button{
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 14px;
+    font-size: 30px;
+    line-height: 35px;
+    padding: 0 26px;
+    width: 140px;
+    font-family: Arial, serif;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    left: 50px;
+    cursor: pointer;
+}
+
+.delete_wish_button:hover{
+    background-color: #ff3838;
+}
+.delete_wish_button:active{
+    background-color: #eb0000;
+}

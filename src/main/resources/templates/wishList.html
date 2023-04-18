@@ -67,7 +67,7 @@
         <td th:text="${wish.wish_price}"/>
         <td>
             <a th:href="@{'/deleteWish/'+ ${wishlist} + '/'+${wish.wish_id}}">
-                <button>Slet ønske</button>
+                <button class="delete_wish_button">Slet</button>
             </a>
             <a class="wish_Button" href="#popup4">Rediger ønske</a>
             <div id="popup4" class="overlay">
