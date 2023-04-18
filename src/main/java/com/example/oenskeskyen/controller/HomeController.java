@@ -132,11 +132,11 @@ public class HomeController {
     }
     @GetMapping("deleteWishList/{wishlist_id}")
     public String deleteWishlist(@PathVariable("wishlist_id") int wishlist_id){
-        boolean deleted = wishService.deleteWish(wishlist_id);
+        boolean deleted = wishService.deleteWishList(wishlist_id);
         if(deleted){
-            return "redirect:/viewWishList/" + wishlist_id;
+            return "redirect:/userpage";
         } else {
-            return "redirect:/viewWishList/" + wishlist_id;
+            return "redirect:/userpage";
         }
     }
 
