@@ -43,10 +43,11 @@
     padding: 20px;
     background: lightgrey;
     border-radius: 12px;
-    left: 50%;
+    left: 35%;
     width: 30%;
     position: fixed;
     transition: all 2s ease-in-out;
+    top: 170px;
 }
 
 .popup h2 {
@@ -133,11 +134,12 @@ input [type=text]{
     border-radius: 6px;
     margin-bottom: 10px;
     font-family: Arial, serif;
-    font-size: 30px;
+    font-size: 20px;
     padding: 10px 45px;
     border-width: 1px;
     border-color: grey;
     text-align: left;
+    width: 350px;
 }
 
 .newList_button{

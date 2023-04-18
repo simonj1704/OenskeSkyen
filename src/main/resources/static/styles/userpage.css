@@ -146,3 +146,25 @@ ul {
     height: 50px;
     margin-left: 50px;
 }
+
+.delete_button{
+    background-color: #ff6b6b;
+    border-radius: 14px;
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+    padding: 2px 16px;
+    text-decoration: none;
+    text-align: center;
+    top: -195px;
+    position: relative;
+    color: white;
+    font-family: Arial, serif;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.delete_button:hover{
+    background-color: #ff3838;
+}
+.delete_button:active{
+    background-color: #eb0000;
+}
