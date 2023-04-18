@@ -58,7 +58,6 @@ public class WishRepo {
     public void addWishToWishlist(Wish wish, int wishlist_id){
         String sql = "INSERT INTO wish (wish_id, wish_name, wish_price, wishlist_id, reserved) VALUES(?,?,?,?,?)";
         template.update(sql, wish.getWish_id(), wish.getWish_name(), wish.getWish_price(), wishlist_id, false);
-        //TODO make it possible to choose reserved status. Add checkbox.
     }
 
     public void addWishlist(Wishlist wishlist, String username){

@@ -1,4 +1,4 @@
-.wish_Button{
+.wish_Button {
     background-color: #9eb25d;
     border: none;
     border-radius: 14px;
@@ -13,39 +13,45 @@
     text-decoration: none;
     position: relative;
     left: 50px;
-}
-.back_button {
-            background-color: #ff6b6b;
-            border: none;
-            border-radius: 14px;
-            font-size: 30px;
-            line-height: 48px;
-            padding: 0 26px;
-            margin: 10px;
-            width: 132px;
-            height: 50px;
-            font-family: Arial, serif;
-            color: white;
-            text-decoration: none;
-            position: relative;
-            left: 50px;
-        }
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 
-.wish_Button:hover{
+}
+
+.back_button {
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 14px;
+    font-size: 30px;
+    line-height: 48px;
+    padding: 0 26px;
+    margin: 10px;
+    width: 132px;
+    height: 50px;
+    font-family: Arial, serif;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    left: 50px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.wish_Button:hover {
     background-color: #92a64f;
 }
-.wish_Button:active{
+
+.wish_Button:active {
     background-color: #74843f;
 }
 
-.back_button:hover{
+.back_button:hover {
     background-color: #ff3838;
 }
-.back_button:active{
+
+.back_button:active {
     background-color: #eb0000;
 }
 
-.delete_wish_button{
+.delete_wish_button {
     background-color: #ff6b6b;
     border: none;
     border-radius: 14px;
@@ -59,11 +65,13 @@
     position: relative;
     left: 50px;
     cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-.delete_wish_button:hover{
+.delete_wish_button:hover {
     background-color: #ff3838;
 }
-.delete_wish_button:active{
+
+.delete_wish_button:active {
     background-color: #eb0000;
 }
